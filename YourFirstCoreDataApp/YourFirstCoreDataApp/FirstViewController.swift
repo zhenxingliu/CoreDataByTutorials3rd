@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     var names:[String] = []
+    
+    //1 -- 实体对象数组
+    var people:[NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +29,12 @@ class FirstViewController: UIViewController {
                                       message: "Add a new name",
                                       preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save",style:.default) {
-        [unowned self] action in
+            [unowned self] action in
             guard let textField = alert.textFields?.first,
                 let nameToSave = textField.text else {
                     return
             }
-            self.names.append(nameToSave)
+            self.save(name: nameToSave)
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "Cancel",
@@ -38,7 +42,26 @@ class FirstViewController: UIViewController {
         alert.addTextField()
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
-        present(alert, animated: true)    }
+        present(alert, animated: true)
+        
+    }
+    
+    // 4 -- 增加 Save方法
+    func save(name:String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)
+        let person = NSManagedObject(entity: entity!, insertInto: managedContext)
+        person.setValue(name, forKeyPath: "name")
+        do {
+            try managedContext.save()
+            people.append(person)
+        } catch let error as NSError {
+            print("Could not save.\(error),\(error.userInfo)")
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {
@@ -51,12 +74,16 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        // 2 --
+        return people.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = names[indexPath.row]
+        let person = people[indexPath.row]
+        // 3 --
+        //cell.textLabel?.text = names[indexPath.row]
+        cell.textLabel?.text = person.value(forKeyPath: "name") as? String
         return cell
     }
 }
