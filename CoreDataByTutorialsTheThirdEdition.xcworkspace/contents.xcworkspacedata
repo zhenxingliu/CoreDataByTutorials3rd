@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:IntermediateFetching/IntermediateFetching.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NSFetchedResultsController/NSFetchedResultsController.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TheCoreDataStack/TheCoreDataStack.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NSManagedObjectSubclasses/NSManagedObjectSubclasses.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YourFirstCoreDataApp/YourFirstCoreDataApp.xcodeproj">
+   </FileRef>
+</Workspace>
