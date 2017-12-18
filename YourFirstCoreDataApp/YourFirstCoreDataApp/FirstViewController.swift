@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  TheCoreDataStack
+//  FirstViewController.swift
+//  YourFirstCoreDataApp
 //
 //  Created by 刘振兴 on 2017/12/18.
 //  Copyright © 2017年 zoneland. All rights reserved.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class FirstViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var names:[String] = []
@@ -24,9 +24,8 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "New Name",
                                       message: "Add a new name",
                                       preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "Save",
-                                       [unowned self] action in
-        style: .default) {
+        let saveAction = UIAlertAction(title: "Save",style:.default) {
+        [unowned self] action in
             guard let textField = alert.textFields?.first,
                 let nameToSave = textField.text else {
                     return
@@ -41,16 +40,16 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true)    }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
-extension ViewController:UITableViewDataSource {
+extension FirstViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
     }
@@ -61,4 +60,6 @@ extension ViewController:UITableViewDataSource {
         return cell
     }
 }
+
+
 
