@@ -1,5 +1,5 @@
 //
-//  Bowtie+CoreDataClass.swift
+//  Person+CoreDataClass.swift
 //  NSManagedObjectSubclasses
 //
 //  Created by 刘振兴 on 2017/12/18.
@@ -10,7 +10,6 @@
 import Foundation
 import CoreData
 
-@objc(Bowtie)
-public class Bowtie: NSManagedObject {
+public class Person: NSManagedObject {
 
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4442B8E1FE7B44C006518C8 /* Bowtie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4442B8C1FE7B44C006518C8 /* Bowtie+CoreDataClass.swift */; };
+		E4442B8F1FE7B44C006518C8 /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4442B8D1FE7B44C006518C8 /* Bowtie+CoreDataProperties.swift */; };
 		E46F61DD1FE7652B002FA497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46F61DC1FE7652B002FA497 /* AppDelegate.swift */; };
 		E46F61DF1FE7652B002FA497 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46F61DE1FE7652B002FA497 /* SecondViewController.swift */; };
 		E46F61E21FE7652B002FA497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46F61E01FE7652B002FA497 /* Main.storyboard */; };
@@ -14,11 +16,11 @@
 		E46F61E71FE7652B002FA497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46F61E61FE7652B002FA497 /* Assets.xcassets */; };
 		E46F61EA1FE7652B002FA497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46F61E81FE7652B002FA497 /* LaunchScreen.storyboard */; };
 		E476F35C1FE7942C00C6D5AA /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E476F35B1FE7942C00C6D5AA /* SampleData.plist */; };
-		E476F35F1FE7993E00C6D5AA /* Bowtie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476F35D1FE7993E00C6D5AA /* Bowtie+CoreDataClass.swift */; };
-		E476F3601FE7993E00C6D5AA /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476F35E1FE7993E00C6D5AA /* Bowtie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4442B8C1FE7B44C006518C8 /* Bowtie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E4442B8D1FE7B44C006518C8 /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E46F61D91FE7652B002FA497 /* NSManagedObjectSubclasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSManagedObjectSubclasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46F61DC1FE7652B002FA497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E46F61DE1FE7652B002FA497 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -28,8 +30,6 @@
 		E46F61E91FE7652B002FA497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E46F61EB1FE7652B002FA497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E476F35B1FE7942C00C6D5AA /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleData.plist; sourceTree = "<group>"; };
-		E476F35D1FE7993E00C6D5AA /* Bowtie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bowtie+CoreDataClass.swift"; path = "/Users/liuzhenxing/github/CoreDataByTutorialsTheThirdEdition/NSManagedObjectSubclasses/NSManagedObjectSubclasses/Bowtie+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		E476F35E1FE7993E00C6D5AA /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bowtie+CoreDataProperties.swift"; path = "/Users/liuzhenxing/github/CoreDataByTutorialsTheThirdEdition/NSManagedObjectSubclasses/NSManagedObjectSubclasses/Bowtie+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		E46F61DB1FE7652B002FA497 /* NSManagedObjectSubclasses */ = {
 			isa = PBXGroup;
 			children = (
-				E476F35D1FE7993E00C6D5AA /* Bowtie+CoreDataClass.swift */,
-				E476F35E1FE7993E00C6D5AA /* Bowtie+CoreDataProperties.swift */,
+				E4442B8C1FE7B44C006518C8 /* Bowtie+CoreDataClass.swift */,
+				E4442B8D1FE7B44C006518C8 /* Bowtie+CoreDataProperties.swift */,
 				E476F35B1FE7942C00C6D5AA /* SampleData.plist */,
 				E46F61DC1FE7652B002FA497 /* AppDelegate.swift */,
 				E46F61DE1FE7652B002FA497 /* SecondViewController.swift */,
@@ -152,8 +152,8 @@
 				E46F61E51FE7652B002FA497 /* NSManagedObjectSubclasses.xcdatamodeld in Sources */,
 				E46F61DF1FE7652B002FA497 /* SecondViewController.swift in Sources */,
 				E46F61DD1FE7652B002FA497 /* AppDelegate.swift in Sources */,
-				E476F35F1FE7993E00C6D5AA /* Bowtie+CoreDataClass.swift in Sources */,
-				E476F3601FE7993E00C6D5AA /* Bowtie+CoreDataProperties.swift in Sources */,
+				E4442B8E1FE7B44C006518C8 /* Bowtie+CoreDataClass.swift in Sources */,
+				E4442B8F1FE7B44C006518C8 /* Bowtie+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
